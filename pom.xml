@@ -12,9 +12,7 @@
   <url>https://github.com/GRISE-UPM/PROF-2021-EX1</url>
 
   <properties>
-      <junit-platform.version>1.6.2</junit-platform.version>
       <junit-jupiter.version>5.6.2</junit-jupiter.version>
-      <maven.version>3.8.0</maven.version>
       <java.version>11</java.version>
   </properties>
 
@@ -24,11 +22,6 @@
       <artifactId>junit</artifactId>
       <version>4.12</version>
         <scope>test</scope>
-    </dependency>
-        <dependency>
-            <groupId>org.junit.platform</groupId>
-            <artifactId>junit-platform-surefire-provider</artifactId>
-            <version>1.1.0</version>
     </dependency>
     <dependency>
         <groupId>org.junit.jupiter</groupId>
@@ -40,30 +33,18 @@
 
     <build>
         <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>${maven.version}</version>
-                    <configuration>
-                        <release>${java.version}</release>
-                    </configuration>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <release>${java.version}</release>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.19.1</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.junit.platform</groupId>
-                        <artifactId>junit-platform-surefire-provider</artifactId>
-                        <version>1.1.0</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.junit.jupiter</groupId>
-                        <artifactId>junit-jupiter-engine</artifactId>
-                        <version>5.1.0</version>
-                    </dependency>
-                </dependencies>
+                <version>2.22.0</version>
             </plugin>
         </plugins>
     </build>
